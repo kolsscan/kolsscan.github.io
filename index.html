@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>KoL'SScan — every KOL call in your X feed, scored</title>
+<meta name="description" content="Chrome extension that tracks token calls in your X feed: KOL hit rate, max× after the post, deleted calls, shareable stats card. Everything stays in your browser.">
+<meta property="og:title" content="KoL'SScan — every KOL call, scored">
+<meta property="og:description" content="Hit rate, max× after the post and deleted calls for every KOL in your X feed.">
+<meta property="og:image" content="https://kolsscan.github.io/img/screenshot-1-card.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="img/favicon.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  .hero { display: grid; grid-template-columns: 1fr 1.25fr; gap: 48px; align-items: center; padding: 56px 0 72px; }
+  .hero h1 { font-size: clamp(40px, 6vw, 64px); line-height: 1.04; letter-spacing: -0.03em; margin: 0 0 20px; font-weight: 800; }
+  .hero h1 em { font-style: normal; color: var(--green); }
+  .hero p { color: var(--dim); font-size: 19px; margin: 0 0 28px; }
+  .cta { display: inline-flex; align-items: center; gap: 10px; padding: 14px 24px; border-radius: 999px; background: var(--text); color: var(--bg); font-weight: 800; font-size: 16px; }
+  .cta:hover { text-decoration: none; filter: brightness(1.1); }
+  .cta.soon { background: var(--elev); color: var(--dim); box-shadow: inset 0 0 0 1px var(--line); cursor: default; }
+  .note { margin-top: 14px; color: var(--dim); font-size: 14px; }
+  .shot { width: 100%; border-radius: 18px; box-shadow: 0 0 0 1px var(--line), 0 30px 80px rgba(0, 0, 0, .35); display: block; }
+  .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding-bottom: 72px; }
+  .f { padding: 22px; border-radius: 20px; background: var(--elev); }
+  .f b { display: block; font-size: 17px; margin-bottom: 6px; }
+  .f span { color: var(--dim); font-size: 15px; }
+  .gallery { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; padding-bottom: 80px; }
+  .gallery img:first-child { grid-column: 1 / -1; }
+  h2.sec { font-size: 30px; letter-spacing: -0.02em; margin: 0 0 22px; }
+  @media (max-width: 820px) {
+    .hero { grid-template-columns: 1fr; padding-top: 24px; }
+    .features, .gallery { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<header class="wrap">
+  <a class="brand" href="/"><img src="img/logo.png" alt="">KoL'SScan</a>
+  <nav><a href="#features">Features</a><a href="privacy">Privacy</a></nav>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div>
+      <h1>Every KOL call,<br><em>scored</em>.</h1>
+      <p>A Chrome extension for X. It spots token calls in your feed and shows how they actually played out — hit rate, entry right after the post, max× over 24h&nbsp;/&nbsp;7d&nbsp;/&nbsp;2w&nbsp;/&nbsp;1m, and the calls the author quietly deleted.</p>
+      <!-- STORE_LINK: когда расширение пройдёт проверку, заменить на <a class="cta" href="https://chromewebstore.google.com/detail/...">Add to Chrome — it's free</a> -->
+      <span class="cta soon">Coming soon to Chrome Web Store</span>
+      <div class="note">Free · No account · Everything stays in your browser</div>
+    </div>
+    <img class="shot" src="img/hero-card.png" alt="KOL card with hit rate, entries and max× after each call">
+  </section>
+
+  <section id="features" class="features">
+    <div class="f"><b>Honest hit rate</b><span>Entry is the first candle after the post — the price a reader could actually get. A hit is ×3 or more.</span></div>
+    <div class="f"><b>“Deleted it”</b><span>When a KOL deletes a post with a bad call, KoL'SScan notices — and remembers.</span></div>
+    <div class="f"><b>Called at the top</b><span>Flags calls where the token had already 3×’d in the 24h before the post.</span></div>
+    <div class="f"><b>Leaderboard</b><span>Best and worst KOLs from your feed. Copy any token’s contract address in one click.</span></div>
+    <div class="f"><b>Share the receipts</b><span>Turn a KOL’s track record into an image and paste it straight into your post.</span></div>
+    <div class="f"><b>Private by design</b><span>No servers, no accounts, no trackers. Data lives in your browser. <a href="privacy">Privacy policy</a>.</span></div>
+  </section>
+
+  <h2 class="sec">A closer look</h2>
+  <section class="gallery">
+    <img class="shot" src="img/screenshot-4-png.png" alt="Shareable PNG stats card">
+    <img class="shot" src="img/screenshot-3-popup.png" alt="Popup leaderboard with copyable contract addresses">
+    <img class="shot" src="img/screenshot-5-vik.png" alt="Vik the candle mascot and chat">
+    <img class="shot" src="img/screenshot-2-light.png" alt="Light theme">
+  </section>
+</main>
+
+<footer class="wrap">© 2026 KoL'SScan · <a href="privacy">Privacy</a> · <a href="mailto:workflips@gmail.com">workflips@gmail.com</a> · Not financial advice.</footer>
+</body>
+</html>
