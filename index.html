@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>KoL'SScan — every KOL call in your X feed, scored</title>
-<meta name="description" content="Chrome extension that tracks token calls in your X feed: KOL hit rate, max× after the post, deleted calls, shareable stats card. Everything stays in your browser.">
+<meta name="description" content="Chrome extension that tracks token calls in your X feed: KOL hit rate, max× after the post, deleted calls, KOL comparison, shareable stats card. Free on the Chrome Web Store.">
 <meta property="og:title" content="KoL'SScan — every KOL call, scored">
 <meta property="og:description" content="Hit rate, max× after the post and deleted calls for every KOL in your X feed.">
 <meta property="og:image" content="https://kolsscan.github.io/img/screenshot-1-card.png">
@@ -21,6 +21,8 @@
   .cta.soon { background: var(--elev); color: var(--dim); box-shadow: inset 0 0 0 1px var(--line); cursor: default; }
   .note { margin-top: 14px; color: var(--dim); font-size: 14px; }
   .shot { width: 100%; border-radius: 18px; box-shadow: 0 0 0 1px var(--line), 0 30px 80px rgba(0, 0, 0, .35); display: block; }
+  .promo { padding-bottom: 72px; }
+  .promo video { aspect-ratio: 16 / 9; background: #0d0f14; }
   .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding-bottom: 72px; }
   .f { padding: 22px; border-radius: 20px; background: var(--elev); }
   .f b { display: block; font-size: 17px; margin-bottom: 6px; }
@@ -45,20 +47,26 @@
     <div>
       <h1>Every KOL call,<br><em>scored</em>.</h1>
       <p>A Chrome extension for X. It spots token calls in your feed and shows how they actually played out — hit rate, entry right after the post, max× over 24h&nbsp;/&nbsp;7d&nbsp;/&nbsp;2w&nbsp;/&nbsp;1m, and the calls the author quietly deleted.</p>
-      <!-- STORE_LINK: когда расширение пройдёт проверку, заменить на <a class="cta" href="https://chromewebstore.google.com/detail/...">Add to Chrome — it's free</a> -->
-      <span class="cta soon">Coming soon to Chrome Web Store</span>
-      <div class="note">Free · No account · Everything stays in your browser</div>
+      <a class="cta" href="https://chromewebstore.google.com/detail/kolsscan-%E2%80%94-kol-call-track/dpggfhnpoemnljlchhdnmjdbbobhngdo" target="_blank" rel="noopener">Add to Chrome — it's free</a>
+      <div class="note">v1.0.1 on the Chrome Web Store · No account · No trackers</div>
     </div>
     <img class="shot" src="img/hero-card.png" alt="KOL card with hit rate, entries and max× after each call">
+  </section>
+
+  <section class="promo">
+    <video class="shot" src="video/kolsscan-1.0.1.mp4" poster="video/poster.jpg" controls muted playsinline preload="none" aria-label="KoL'SScan in 20 seconds"></video>
   </section>
 
   <section id="features" class="features">
     <div class="f"><b>Honest hit rate</b><span>Entry is the first candle after the post — the price a reader could actually get. A hit is ×3 or more.</span></div>
     <div class="f"><b>“Deleted it”</b><span>When a KOL deletes a post with a bad call, KoL'SScan notices — and remembers.</span></div>
     <div class="f"><b>Called at the top</b><span>Flags calls where the token had already 3×’d in the 24h before the post.</span></div>
-    <div class="f"><b>Leaderboard</b><span>Best and worst KOLs from your feed. Copy any token’s contract address in one click.</span></div>
+    <div class="f"><b>Leaderboard</b><span>Best and worst KOLs from your feed, filtered by chain. Copy any token’s contract address in one click.</span></div>
     <div class="f"><b>Share the receipts</b><span>Turn a KOL’s track record into an image and paste it straight into your post.</span></div>
-    <div class="f"><b>Private by design</b><span>No servers, no accounts, no trackers. Data lives in your browser. <a href="privacy">Privacy policy</a>.</span></div>
+    <div class="f"><b>Scan a profile</b><span>Open any KOL’s profile and collect their calls from the last 50, 100 or 200 posts.</span></div>
+    <div class="f"><b>Compare &amp; watch</b><span>Put two KOLs side by side, star the ones you follow — their calls light up in your feed.</span></div>
+    <div class="f"><b>Community base</b><span>Calls found by other users show up for you too. Every post is verified on X first.</span></div>
+    <div class="f"><b>Private by design</b><span>No accounts, no trackers. Your history lives in your browser; only public call data goes to the community base — and you can switch it off. <a href="privacy">Privacy policy</a>.</span></div>
   </section>
 
   <h2 class="sec">A closer look</h2>
